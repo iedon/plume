@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nloglib", "nloglib.vcxproj", "{DD8EE4AC-36CB-4D90-BF6B-E6C595CDE4A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "example", "example", "{5D8BBA63-E4E8-43C4-9CC6-9917359E1AAA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nlog", "nlog.vcxproj", "{029E0E90-8A03-47BF-B6D7-1C5680FA69FF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01_simple", "example\01_simple.vcxproj", "{4C9E4664-7028-489F-8D8B-3720875619AC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{029E0E90-8A03-47BF-B6D7-1C5680FA69FF} = {029E0E90-8A03-47BF-B6D7-1C5680FA69FF}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02_custom_style", "example\02_custom_style.vcxproj", "{0AE57B5B-D60D-48E5-9CE9-AEEA065A5C9F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DD8EE4AC-36CB-4D90-BF6B-E6C595CDE4A1} = {DD8EE4AC-36CB-4D90-BF6B-E6C595CDE4A1}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03_multiple_thread", "example\03_multiple_thread.vcxproj", "{78CFC81A-98BA-4000-83F9-AF848A98E435}"
+	ProjectSection(ProjectDependencies) = postProject
+		{029E0E90-8A03-47BF-B6D7-1C5680FA69FF} = {029E0E90-8A03-47BF-B6D7-1C5680FA69FF}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04_multiple_instance", "example\04_multiple_instance.vcxproj", "{CCB3CA15-92E5-4BC8-8345-7636A8E68376}"
+	ProjectSection(ProjectDependencies) = postProject
+		{029E0E90-8A03-47BF-B6D7-1C5680FA69FF} = {029E0E90-8A03-47BF-B6D7-1C5680FA69FF}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD8EE4AC-36CB-4D90-BF6B-E6C595CDE4A1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DD8EE4AC-36CB-4D90-BF6B-E6C595CDE4A1}.Debug|Win32.Build.0 = Debug|Win32
+		{DD8EE4AC-36CB-4D90-BF6B-E6C595CDE4A1}.Release|Win32.ActiveCfg = Release|Win32
+		{DD8EE4AC-36CB-4D90-BF6B-E6C595CDE4A1}.Release|Win32.Build.0 = Release|Win32
+		{029E0E90-8A03-47BF-B6D7-1C5680FA69FF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{029E0E90-8A03-47BF-B6D7-1C5680FA69FF}.Debug|Win32.Build.0 = Debug|Win32
+		{029E0E90-8A03-47BF-B6D7-1C5680FA69FF}.Release|Win32.ActiveCfg = Release|Win32
+		{029E0E90-8A03-47BF-B6D7-1C5680FA69FF}.Release|Win32.Build.0 = Release|Win32
+		{4C9E4664-7028-489F-8D8B-3720875619AC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4C9E4664-7028-489F-8D8B-3720875619AC}.Debug|Win32.Build.0 = Debug|Win32
+		{4C9E4664-7028-489F-8D8B-3720875619AC}.Release|Win32.ActiveCfg = Release|Win32
+		{4C9E4664-7028-489F-8D8B-3720875619AC}.Release|Win32.Build.0 = Release|Win32
+		{0AE57B5B-D60D-48E5-9CE9-AEEA065A5C9F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0AE57B5B-D60D-48E5-9CE9-AEEA065A5C9F}.Debug|Win32.Build.0 = Debug|Win32
+		{0AE57B5B-D60D-48E5-9CE9-AEEA065A5C9F}.Release|Win32.ActiveCfg = Release|Win32
+		{0AE57B5B-D60D-48E5-9CE9-AEEA065A5C9F}.Release|Win32.Build.0 = Release|Win32
+		{78CFC81A-98BA-4000-83F9-AF848A98E435}.Debug|Win32.ActiveCfg = Debug|Win32
+		{78CFC81A-98BA-4000-83F9-AF848A98E435}.Debug|Win32.Build.0 = Debug|Win32
+		{78CFC81A-98BA-4000-83F9-AF848A98E435}.Release|Win32.ActiveCfg = Release|Win32
+		{78CFC81A-98BA-4000-83F9-AF848A98E435}.Release|Win32.Build.0 = Release|Win32
+		{CCB3CA15-92E5-4BC8-8345-7636A8E68376}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CCB3CA15-92E5-4BC8-8345-7636A8E68376}.Debug|Win32.Build.0 = Debug|Win32
+		{CCB3CA15-92E5-4BC8-8345-7636A8E68376}.Release|Win32.ActiveCfg = Release|Win32
+		{CCB3CA15-92E5-4BC8-8345-7636A8E68376}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4C9E4664-7028-489F-8D8B-3720875619AC} = {5D8BBA63-E4E8-43C4-9CC6-9917359E1AAA}
+		{0AE57B5B-D60D-48E5-9CE9-AEEA065A5C9F} = {5D8BBA63-E4E8-43C4-9CC6-9917359E1AAA}
+		{78CFC81A-98BA-4000-83F9-AF848A98E435} = {5D8BBA63-E4E8-43C4-9CC6-9917359E1AAA}
+		{CCB3CA15-92E5-4BC8-8345-7636A8E68376} = {5D8BBA63-E4E8-43C4-9CC6-9917359E1AAA}
+	EndGlobalSection
+EndGlobal

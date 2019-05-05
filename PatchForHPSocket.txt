@@ -1,0 +1,21 @@
+/* HP-Socket < 5.4.2 版本需要手动修改如下代码来设置 OnSend 与 OnClose 的同步
+1. TcpServer.cpp, EnHandleResult CTcpServer::TriggerFireClose() 中，在 CCriSecLock locallock(pSocketObj->csRecv); 下方，增加：CCriSecLock sendlock(pSocketObj->csSend);
+2. TcpServer.cpp, EnHandleResult CTcpServer::TriggerFireSend() 中：
+	
+  将原来的 EnHandleResult rs = TRIGGER(FireSend(pSocketObj, (BYTE*)pBufferObj->buff.buf, pBufferObj->buff.len)); 替换为：
+
+	EnHandleResult rs = (EnHandleResult)HR_CLOSED;
+
+	if (TSocketObj::IsValid(pSocketObj))
+	{
+		CCriSecLock sendlock(pSocketObj->csSend);
+
+		if (TSocketObj::IsValid(pSocketObj))
+		{
+			rs = TRIGGER(FireSend(pSocketObj, (BYTE*)pBufferObj->buff.buf, pBufferObj->buff.len));
+		}
+	}
+*/
+3. HPSocket4CLib-2017 项目中，库添加 zdll.lib，删除自带 zlib 代码引用（项目->Common->zlib 删除）。
+4. 复制并替换 Release 中的 libssl.lib, libcrypto.lib, zdll.lib 到 Common\Lib\openssl\15.0\x86\lib 中。
+5. 编译 HPSocket4C.lib
